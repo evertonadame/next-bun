@@ -43,12 +43,20 @@ const Button = ({ children, ...props }: ButtonProps) => {
     fluid,
     iconOnly,
     loading,
+    className,
     ...restProps
   } = props;
   return (
     <button
       {...restProps}
-      className={buttonStyles({ variant, size, fluid, iconOnly, loading })}
+      className={buttonStyles({
+        variant,
+        size,
+        fluid,
+        iconOnly,
+        loading,
+        className,
+      })}
     >
       {children}
     </button>
